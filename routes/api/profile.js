@@ -312,7 +312,7 @@ router.delete(
       .then(() => {
         User.findOneAndRemove({ _id: req.user.id }).then(() =>
           res.json({ success: true })
-        ); 
+        );
       })
       .catch(err => res.status(400).json(err));
   }
